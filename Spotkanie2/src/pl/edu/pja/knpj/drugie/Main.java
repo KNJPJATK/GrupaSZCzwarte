@@ -43,7 +43,7 @@ public class Main {
                 genome4 = new Genome("BBAA");
 
         AbstractGenomeProcessor genomeProcessor;
-        //genomeProcessor = new AbstractGenomeProcessor();
+//        genomeProcessor = new AbstractGenomeProcessor();
         //  Nie mozemy miec zadnych instancji klas abstrakcyjnych, dlatego kompilator wywali blad
         //  jak odkomentujemy powyzsza linie.
 

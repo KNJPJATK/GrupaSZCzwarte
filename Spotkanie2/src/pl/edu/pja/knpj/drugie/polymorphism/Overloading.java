@@ -5,6 +5,19 @@ package pl.edu.pja.knpj.drugie.polymorphism;
  */
 public class Overloading {
 
+
+    int a, b;
+
+    public Overloading(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    public Overloading(Integer a, Integer b){
+        this.a = a;
+        this.b = b;
+    }
+
     public int add(int a){
         return a;
     }

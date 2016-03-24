@@ -9,7 +9,7 @@ public class Comps {
 		Arrays.sort(a,new MyComp(MyComp.COMP.ByNumOfDivs));
 		printTable("ByNumOfDivs ", a);
 		Arrays.sort(a,new MyComp(MyComp.COMP.BySumOfDigs));
-		printTable("BySumOfDigs ", a); 17 
+		printTable("BySumOfDigs ", a); 
 	}
 
 	static void printTable(String mess, Integer[] a){

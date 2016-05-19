@@ -1,58 +1,62 @@
 package edu.knpj.testujemy.sample2;
 
-import java.io.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.SocketTimeoutException;
 
 /**
  * Created by andrew on 19.05.2016.
  */
 public class HelloServer implements Runnable {
 
-    private ServerSocket server;
+    private ServerSocket serverSocket;
 
     private HelloServer(int port) throws IOException {
-        server = new ServerSocket(port);
+        serverSocket = new ServerSocket(port);
     }
+
+    /*
+        Hostname: 172.23.65.98
+        Port: 9090
+     */
 
     @Override
     public void run() {
-        while(true)
-        {
-            try
-            {
-                System.out.println("Waiting for next client...");
-                Socket client = server.accept();
-                DataInputStream in = new DataInputStream(client.getInputStream());
-                DataOutputStream out = new DataOutputStream(client.getOutputStream());
+        while(true){
+//            Socket socket = new Socket("172.23.65.98", 9090);
+            try {
+                System.out.println("Oczekuje na polaczenie");
+                Socket clientSocket = serverSocket.accept();
 
-                String name = in.readUTF();
-                System.out.println("A client has connected! Her/his name is: " + name);
-                out.writeUTF("Hello " + name + "!");
+                if (clientSocket.getInetAddress().getHostAddress().endsWith("1.157")){
+//                    continue;
+                }
 
-                client.close();
-                in.close();
-                out.close();
-            }catch(SocketTimeoutException s)
-            {
-                System.out.println("Socket timed out!");
-                break;
-            }catch(IOException e)
-            {
-                e.printStackTrace();
-                break;
+                DataInputStream in = new DataInputStream(clientSocket.getInputStream());
+                String nazwa =  in.readUTF();
+
+                DataOutputStream out = new DataOutputStream(clientSocket.getOutputStream());
+                String response = "Hello " + nazwa + "!";
+                System.out.println("Odpowiedz: = [" + response + "]");
+                System.out.println("Od: " + clientSocket.getInetAddress().getHostAddress());
+
+                out.writeUTF(response);
+
+            } catch (IOException e) {
+                System.err.println("Blad w dzialaniu serwera.");
+                run();
             }
         }
     }
 
     public static void main(String[] args) {
         try {
-            HelloServer helloServer = new HelloServer(9090);
-            new Thread(helloServer).start();
+            new Thread(new HelloServer(9090)).start();
         } catch (IOException e) {
-            System.err.println("Problem estabishing server. Exiting...");
-            System.exit(1);
+            System.err.println("Blad przy tworzeniu serwera.");
+            e.printStackTrace();
         }
     }
 }

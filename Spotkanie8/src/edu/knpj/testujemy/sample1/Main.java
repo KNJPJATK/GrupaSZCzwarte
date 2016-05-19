@@ -1,47 +1,44 @@
 package edu.knpj.testujemy.sample1;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.InetSocketAddress;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Socket socket = new Socket();
-        String host = "www.google.com";
-        InetSocketAddress address = new InetSocketAddress(host, 80);
-        PrintWriter writer;
-        BufferedReader reader;
+        Socket socket = new Socket(); // tworzymy socket do TCP -> HTTP
+        String hostName = "google.com";
+
+        InetSocketAddress address = new InetSocketAddress(hostName, 80);
 
         try {
             socket.connect(address);
-            writer = new PrintWriter(socket.getOutputStream());
-            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+//            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+//            DataInputStream in = new DataInputStream(socket.getInputStream());
+            PrintWriter out = new PrintWriter(socket.getOutputStream());
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-            String message = "GET / HTTP/1.1\r\n\r\n";
+            String request = "GET / HTTP/1.1\r\n\r\n";
+            out.println(request);
+            out.flush();
+            String response = in.readLine();
 
-            writer.println(message);
-            writer.flush();
-
-            for (String response = reader.readLine(); response != null; response = reader.readLine()){
+            while(response != null){
                 System.out.println(response);
+                response = in.readLine();
             }
 
-            writer.close();
-            reader.close();
             socket.close();
+            out.close();
+            in.close();
 
-        } catch (UnknownHostException e) {
-            System.err.println("Don't know about host : " + host);
-            System.exit(1);
         } catch (IOException e) {
-            System.err.println("Bład podczas IO");
+            System.err.println("Problem w komunikacji");
+            e.printStackTrace();
             System.exit(1);
         }
+
     }
 }

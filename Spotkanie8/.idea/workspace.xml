@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="641d8463-6b0c-4fce-8147-60b18f497b7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/knpj/testujemy/sample3/UDPSender.java" />
+    <list default="true" id="641d8463-6b0c-4fce-8147-60b18f497b7c" name="Default" comment="Spotkanie 8 sieciowo jeszcze raz">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/knpj/testujemy/sample3/UDPServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/knpj/testujemy/sample1/Main.java" afterPath="$PROJECT_DIR$/src/edu/knpj/testujemy/sample1/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/knpj/testujemy/sample2/HelloServer.java" afterPath="$PROJECT_DIR$/src/edu/knpj/testujemy/sample2/HelloServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/knpj/testujemy/sample2/HelloSocket.java" afterPath="$PROJECT_DIR$/src/edu/knpj/testujemy/sample2/HelloSocket.java" />
     </list>
     <ignored path="Spotkanie8.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +36,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UDPSender.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UDPSender.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/knpj/testujemy/sample3/UDPSender.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="147">
               <caret line="22" column="32" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UDPServer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/knpj/testujemy/sample3/UDPServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,6 +102,8 @@
         <option value="$PROJECT_DIR$/src/edu/knpj/testujemy/sample1/Main.java" />
         <option value="$PROJECT_DIR$/src/edu/knpj/testujemy/sample2/HelloServer.java" />
         <option value="$PROJECT_DIR$/src/edu/knpj/testujemy/sample3/UDPSender.java" />
+        <option value="$PROJECT_DIR$/src/edu/knpj/testujemy/sample3/a.java" />
+        <option value="$PROJECT_DIR$/src/edu/knpj/testujemy/sample3/A.java" />
       </list>
     </option>
   </component>
@@ -700,7 +711,7 @@
       <option name="presentableId" value="Default" />
       <updated>1463647651389</updated>
       <workItem from="1463647663066" duration="5867000" />
-      <workItem from="1463671687538" duration="6884000" />
+      <workItem from="1463671687538" duration="7601000" />
     </task>
     <task id="LOCAL-00001" summary="Spotkanie 8 sieciowo">
       <created>1463672960410</created>
@@ -709,15 +720,22 @@
       <option name="project" value="LOCAL" />
       <updated>1463672960410</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Spotkanie 8 sieciowo jeszcze raz">
+      <created>1463679702342</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1463679702342</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12751000" />
+    <option name="totallyTimeSpent" value="13468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="720" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -731,7 +749,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -788,7 +806,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Spotkanie 8 sieciowo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spotkanie 8 sieciowo" />
+    <MESSAGE value="Spotkanie 8 sieciowo jeszcze raz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spotkanie 8 sieciowo jeszcze raz" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -866,6 +885,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="22" column="32" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/knpj/testujemy/sample3/UDPServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
